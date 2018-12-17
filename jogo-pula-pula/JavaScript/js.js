@@ -160,6 +160,10 @@ function main() {
     record = 0;
   }
 
+  //Adicionar imagem de fundo.
+  //img = new Image();
+  //img.src = "image/fundo.png";
+
   roda();
 }
 
@@ -186,7 +190,7 @@ function desenha() {
 
   ctx.fillStyle = "#ffffff";
   ctx.font = "50px Arial";
-  ctx.fillText("Scorre: " + bloco.score, 30, 68);
+  ctx.fillText(bloco.score, 30, 68);
 
   if (estadoAtual == estados.jogar) {
     ctx.fillStyle = "green";
@@ -200,16 +204,12 @@ function desenha() {
     ctx.fillStyle = "#ffffff";
 
     if (bloco.score > record) {
-      ctx.fillText("Scorre " + bloco.score + "!", -150, -145);
       ctx.fillText("Novo Record!", -150, -65);
     } else if (record < 10) {
-      ctx.fillText("Scorre " + bloco.score + "!", -99, -145);
       ctx.fillText("Record " + record + "!", -99, -65);
     } else if (record >= 10 && record < 100) {
-      ctx.fillText("Scorre " + bloco.score + "!", -112, -145);
       ctx.fillText("Record " + record + "!", -112, -65);
     } else {
-      ctx.fillText("Scorre " + bloco.score + "!", -125, -145);
       ctx.fillText("Record " + record + "!", -125, -65);
     }
 

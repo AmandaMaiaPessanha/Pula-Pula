@@ -4,8 +4,9 @@ function Sprite(x, y, largura, altura) {
     this.largura = largura;
     this.altura = altura;
 
-    this.desenha = function() {
-        
+    this.desenha = function(xCanvas, yCanvas) {
+        ctx.drawImage(img, this.x, this.y, this.largura, this.altura, xCanvas, yCanvas, this.largura, this.altura);        
     }
-
 }
+
+var backGround = new Sprite(0, 0, 600, 600);
